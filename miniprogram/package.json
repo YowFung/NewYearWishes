@@ -1,7 +1,7 @@
 {
   "name": "miniprogram",
   "version": "1.0.0",
-  "description": "小程序开发测试",
+  "description": "小程序：放飞你的新年愿望",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

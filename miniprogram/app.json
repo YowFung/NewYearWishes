@@ -1,18 +1,17 @@
 {
-  "pages": [
-    "pages/index/index",
-    "pages/userConsole/userConsole",
-    "pages/storageConsole/storageConsole",
-    "pages/databaseGuide/databaseGuide",
-    "pages/addFunction/addFunction",
-    "pages/deployFunctions/deployFunctions",
-    "pages/chooseLib/chooseLib"
-  ],
-  "window": {
-    "backgroundColor": "#F6F6F6",
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "云开发 QuickStart",
-    "navigationBarTextStyle": "black"
-  }
+    "pages": [
+        "pages/index/index",
+        "pages/help/help",
+        "pages/list/list",
+        "pages/look/look",
+        "pages/make/make",
+        "pages/wish/wish"
+    ],
+    "window": {
+        "backgroundColor": "#ffecbe",
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#f6f6f6",
+        "navigationBarTitleText": "放飞你的新年愿望",
+        "navigationBarTextStyle": "black"
+    }
 }

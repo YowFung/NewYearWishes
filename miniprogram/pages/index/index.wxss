@@ -1,137 +1,77 @@
-/**index.wxss**/
-
-page {
-  background: #f6f6f6;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+button {
+	background: transparent;
+	outline: none;
+	border: none;
+	font-family: "微软雅黑";
 }
 
-.userinfo, .uploader, .tunnel {
-  margin-top: 40rpx;
-  height: 140rpx;
-  width: 100%;
-  background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-left: none;
-  border-right: none;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  transition: all 300ms ease;
+.header {
+	position: absolute;
+	width: 100%;
+	height: 356rpx;
 }
 
-.userinfo-avatar {
-  width: 100rpx;
-  height: 100rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-  background-size: cover;
-  background-color: white;
+.header image {
+	width: 100%;
+	height: 100%;
 }
 
-.userinfo-avatar:after {
-  border: none;
+.main {
+	position: absolute;
+	top: 336rpx;
+	width: 100%;
+	height: calc(100% - 336rpx);
+	min-height: 712rpx;
+	background-image: url('../../images/bg.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 70% 0;
 }
 
-.userinfo-nickname {
-  font-size: 32rpx;
-  color: #007aff;
-  background-color: white;
-  background-size: cover;
+.btn-group {
+	margin: 0 auto;
+	margin-top: calc(50% - 244rpx);
+	width: 536rpx;
+	height: 492rpx;
+	box-shadow: 1rpx 1rpx 1rpx 1rpx;
+	border-radius: 10rpx;
 }
 
-.userinfo-nickname::after {
-  border: none;
+.btn-group button {
+	width: 536rpx;
+	height: 164rpx;
+	display: block;
 }
 
-.uploader, .tunnel {
-  height: auto;
-  padding: 0 0 0 40rpx;
-  flex-direction: column;
-  align-items: flex-start;
-  box-sizing: border-box;
+.btn-group #btn-make  {
+	background-image: url(../../images/btn-make-default.png);
 }
 
-.uploader-text, .tunnel-text {
-  width: 100%;
-  line-height: 52px;
-  font-size: 34rpx;
-  color: #007aff;
+.btn-group #btn-make:active {
+	background-image: url(../../images/btn-make-pressed.png);
 }
 
-.uploader-container {
-  width: 100%;
-  height: 400rpx;
-  padding: 20rpx 20rpx 20rpx 0;
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  box-sizing: border-box;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+.btn-group #btn-list  {
+	background-image: url(../../images/btn-list-default.png);
 }
 
-.uploader-image {
-  width: 100%;
-  height: 360rpx;
+.btn-group #btn-list:active {
+	background-image: url(../../images/btn-list-pressed.png);
 }
 
-.tunnel {
-  padding: 0 0 0 40rpx;
+.btn-group #btn-look  {
+	background-image: url(../../images/btn-look-default.png);
 }
 
-.tunnel-text {
-  position: relative;
-  color: #222;
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  justify-content: space-between;
-  box-sizing: border-box;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+.btn-group #btn-look:active {
+	background-image: url(../../images/btn-look-pressed.png);
 }
 
-.tunnel-text:first-child {
-  border-top: none;
-}
-
-.tunnel-switch {
-  position: absolute;
-  right: 20rpx;
-  top: -2rpx;
-}
-
-.disable {
-  color: #888;
-}
-
-.service {
-  position: fixed;
-  right: 40rpx;
-  bottom: 40rpx;
-  width: 140rpx;
-  height: 140rpx;
-  border-radius: 50%;
-  background: linear-gradient(#007aff, #0063ce);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  transition: all 300ms ease;
-}
-
-.service-button {
-  position: absolute;
-  top: 40rpx;
-}
-
-.service:active {
-  box-shadow: none;
-}
-
-.request-text {
-  padding: 20rpx 0;
-  font-size: 24rpx;
-  line-height: 36rpx;
-  word-break: break-all;
+.footer {
+	position: absolute;
+	bottom: 32rpx;
+	width: 100%;
+	font-size: 24rpx;
+	text-align: center;
+	color: #cccccc;
 }

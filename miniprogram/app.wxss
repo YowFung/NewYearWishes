@@ -5,3 +5,8 @@
   align-items: center;
   box-sizing: border-box;
 } 
+
+page {
+    background-color: #ffecbe;
+	font-family: "微软雅黑";
+}

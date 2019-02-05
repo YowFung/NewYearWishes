@@ -1,0 +1,58 @@
+<view class="container">
+
+	<view class="header">
+		<image src="img/header-help.png"></image>
+		<button class="btn-back" onclick="window.location.href='index.html'"></button>
+		<view class="title">
+			<view class="own">yowfung</view>
+			<image class="word" src="img/word-the-wish.png"></image>
+		</view>
+	</view>
+
+	<view class="main">
+		<view class="content">
+			希望我的家人朋友快快乐乐幸福健康！
+		</view>
+
+		<view class="status">
+			<view class="power">
+				<image src="img/logo-power.png"></image>
+				<view>动力：66999</view>
+			</view>
+			<view class="location">
+				<image src="img/logo-location.png"></image>
+				<view>位置：九重天</view>
+			</view>
+		</view>	
+
+		<view class="btn-group">
+			<button id="wish" onclick="wish()"></button>
+			<button id="disdain" onclick="disdain()"></button>
+			<button id="me" onclick="me()"></button>
+			<button id="share" onclick="share()"></button>
+		</view>
+
+		<view class="log">
+			<view class="log-item">
+				<view class="helper">yowfung</view>
+				祝TA一臂之力，增加
+				<view class="power-add">43</view>
+				点动力。
+			</view>
+			<view class="log-item">
+				<view class="helper">喜阳阳</view>
+				带给TA热情鼓励，增加
+				<view class="power-add">3</view>
+				点动力。
+			</view>
+			<view class="log-item">
+				<view class="helper">某天</view>
+				不屑一顾地瞄了一眼，减少
+				<view class="power-sub">12</view>
+				点动力。
+			</view>
+		</view>
+
+	</view>
+
+</view>
