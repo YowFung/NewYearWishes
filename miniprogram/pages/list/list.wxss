@@ -1,1 +1,247 @@
-/* pages/list/list.wxss */
+.hr {
+	width: calc(100% - 30rpx);
+	height: 2rpx;
+	margin-left: 15rpx;
+	margin-bottom: 15rpx;
+	background-color: #e9d8b0; 
+}
+
+.header {
+	position: absolute;
+	width: 100%;
+	height: 343rpx;
+}
+
+.header image {
+	width: 100%;
+	height: 100%;
+}
+
+.header .btn-back {
+	position: absolute;
+	top: 38rpx;
+	left: 38rpx;
+	width: 70rpx;
+	height: 72rpx;
+    outline: none;
+	border: none;
+    border-radius: 0px;
+    background-image: url('https://7769-wish-e872ae-1252926300.tcb.qcloud.la/img/btn-back-default.png?sign=e2f7eda5f76122a2acdb67dd3c99b011&t=1549468381');
+    background-size: 100% 100%;
+    background-color: transparent;
+    display: block;
+}
+
+.header .btn-back-hover {
+    background-image: url('https://7769-wish-e872ae-1252926300.tcb.qcloud.la/img/btn-back-pressed.png?sign=2c2ff94ea76ee49f2c2aaed54e52d354&t=1549468390');
+    background-size: 100% 100%;
+}
+
+.header picker {
+    position: absolute;
+	top: 38rpx;
+	right: 38rpx;
+    color: #c2c2c2;
+    font-size: 32rpx;
+}
+
+.header picker image {
+    width: 40rpx;
+    height: 40rpx;
+	vertical-align: middle;
+}
+
+.main {
+	position: absolute;
+	top: 343rpx;
+	width: 100%;
+}
+
+.main .info {
+	margin: 30rpx;
+	font-size: 26rpx;
+	width: calc(100% - 60rpx);
+	height: 38rpx;
+}
+
+.main .info image {
+    width: 30rpx;
+    height: 30rpx;
+    vertical-align: middle;
+    margin-right: 10rpx;
+}
+
+.main .info view {
+    display: inline-block;
+    padding-left: 2rpx;
+    vertical-align: middle;
+}
+
+.main .info .power {
+	color: #588cda;
+}
+
+.main .info .ranking {
+	margin-left: 48rpx;
+	color: #c8484c;
+}
+
+.main .tipText {
+    margin-top: 200rpx;
+    color: #c3bed8;
+    font-size: 30rpx;
+    text-align: center;
+    padding: 0rpx 50rpx;
+}
+
+.main .btn-to-make {
+    margin-top: 200rpx;
+    width: 400rpx;
+}
+
+.main .items {
+	padding: 15rpx;
+}
+
+.main .items .item {
+	border: 4rpx solid #f6b37f;
+	border-radius: 19rpx;
+	background-color: #faeed1;
+	margin-bottom: 19rpx;
+	padding: 9rpx;
+	height: 94rpx;
+	width: calc(100% - 26rpx);
+}
+
+.main .items .item .new-log {
+    width: 20rpx;
+    height: 20rpx;
+    border-radius: 50%;
+    background-color: red;
+    margin: -15rpx;
+    position: absolute;
+    box-shadow: 1rpx 1rpx 12rpx #666666
+}
+
+.main .items .item .new-givedLog {
+    width: 20rpx;
+    height: 20rpx;
+    border-radius: 50%;
+    background-color: #44aa00;
+    margin-left: -15rpx;
+    margin-top: 10rpx;
+    position: absolute;
+    box-shadow: 1rpx 1rpx 12rpx #666666
+}
+
+.main .items .item .icon {
+	width: 64rpx;
+	height: 64rpx;
+    margin-top: 16rpx;
+    margin-left: 8rpx;
+}
+
+.main .items .item .content {
+	margin-left: 100rpx;
+	margin-top: -85rpx;
+	width: calc(100% - 100rpx);
+	height: 49rpx;
+	font-size: 30rpx;
+	color: #129ab7;
+}
+
+.main .items .item .item-power {
+	float: right;
+	margin-right: 8rpx;
+	margin-top: 10rpx;
+}
+
+.main .items .item .item-power image {
+	display: block;
+	margin-left: -32rpx;
+    width: 30rpx;
+    height: 30rpx;
+}
+
+.main .items .item .item-power view {
+	font-size: 26rpx;
+	color: #aecffc;
+	margin-top: -30rpx;
+	display: block;
+}
+
+.main .items .item-show {
+	height: 188rpx;
+	border: 4rpx solid #f29b76;
+	background-color: #ffffff !important;
+}
+
+.main .items .item-finished {
+	border: 4rpx solid #f6b37f;
+	background-color: #fff2ea;
+}
+
+.main .items .item-finished .content {
+	color: #e27357;
+}
+
+.main .items .item-deleted {
+	border: 4rpx solid #a3a3a3;
+	background-color: #eaeaea;
+}
+
+.main .items .item-deleted .content {
+	color: #565656;
+}
+
+.controller {
+	border-top: 2rpx solid #ffecd1;
+	width: calc(100% - 30rpx);
+    height: 66rpx;
+    line-height: 48rpx;
+	margin-top: 58rpx;
+	padding: 12rpx;
+	text-align: center;
+}
+
+.controller text {
+    display: inline-block;
+    margin-top: -20rpx;
+
+}
+
+.controller button {
+	font-size: 30rpx;
+    border: none;
+    outline: none;
+    background: transparant;
+    display: inline-block;
+}
+
+.login {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 999;
+}
+
+.login .login-box {
+    position: absolute;
+    bottom: 0rpx;
+    height: 280rpx;
+    width: 100%;
+    background-color: #fffcee;
+    box-shadow: -5rpx 0rpx 10rpx 3rpx;
+}
+
+.login .login-box view {
+    margin-top: 50rpx;
+    font-size: 34rpx;
+    text-align: center;
+}
+
+.login .login-box button {
+    margin-top: 40rpx;
+    width: 250rpx;
+}

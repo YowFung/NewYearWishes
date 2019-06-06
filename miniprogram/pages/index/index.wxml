@@ -1,17 +1,46 @@
-<view class="container">
+<view class="header">
+    <image src="https://7769-wish-e872ae-1252926300.tcb.qcloud.la/img/header-index.png?sign=ab923b496ce75a9c0aa440f0b0ea93e8&t=1549467585"></image>
+</view>
 
-	<view class="header">
-		<image src="{{ imgUrl.header }}"></image>
-	</view>
 
-	<view class="main">
-		<view class="btn-group">
-			<button id="btn-make" bindtap="OnToMakeWish"></button>
-			<button id="btn-list" bindtap="OnToGetLists"></button>
-			<button id="btn-look" bindtap="OnLookOthers"></button>
-		</view>
+<view class="main">
+    <button 
+        class="{{ bgmOpenIcon ? 'music' : 'music-active' }}"
+        size='mini'
+        plain='true'
+        catchtap='OnMusic'
+    ></button>
 
-		<view class="footer">Copyright © 2019-yowfung</view>
-	</view>
+    <view class="btn-group">
+        <button
+            class='btn_make' 
+            hover-class='btn_make_hover'
+            bindtap="OnToMakeWish"
+        ></button>
+        <button 
+            class='btn_list'
+            hover-class='btn_list_hover'
+            bindtap="OnToGetLists"
+        ></button>
+        <button 
+            class='btn_look'
+            hover-class='btn_look_hover'
+            bindtap="OnToLookOthers"
+        ></button>
+    </view>
 
+    <view class="footer">Copyright © 2019-yowfung</view>
+</view>
+
+<view class='login' hidden='{{ !showLoginBox }}'>
+    <view class='login-box'>
+        <view>您需要先登录才能使用该小程序哦！</view>
+        <button
+            class='login-btn'
+            open-type='getUserInfo'
+            bindgetuserinfo='OnLogin'
+            type='primary'
+            loading='{{ isLogining }}'
+        >微信登录</button>
+    </view>
 </view>

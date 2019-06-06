@@ -1,1 +1,25 @@
-/* pages/look/look.wxss */
+view {
+	margin-top: 75rpx;
+	text-align: center;
+    font-size: 60rpx;
+}
+
+image {
+	width: 80%;
+	margin-left: 10%;
+	margin-top: 52rpx;
+	box-shadow: 0rpx 0rpx 9rpx #444;
+	border-radius: 15rpx;
+}
+
+button {
+	border: none;
+    border-radius: none;
+	outline: none;
+	font-size: 32rpx;
+	background: transparent;
+	width: 100%;
+	margin-top: 75rpx;
+	color: #08f;
+	font-family: "微软雅黑";
+}

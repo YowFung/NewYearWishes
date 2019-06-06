@@ -1,58 +1,73 @@
-<view class="container">
+<view class="header">
+    <image src="https://7769-wish-e872ae-1252926300.tcb.qcloud.la/img/header-help.png?sign=f6b391a6afbb323563be34a76affab77&t=1549548964"></image>
+    <view class="title">
+        <view class="own">{{ user.nickName }}</view>
+        <image class="word" src="https://7769-wish-e872ae-1252926300.tcb.qcloud.la/img/word-the-wish.png?sign=a3c4d98f218f2ab016314c32baeb7e74&t=1549548993"></image>
+    </view>
+</view>
 
-	<view class="header">
-		<image src="img/header-help.png"></image>
-		<button class="btn-back" onclick="window.location.href='index.html'"></button>
-		<view class="title">
-			<view class="own">yowfung</view>
-			<image class="word" src="img/word-the-wish.png"></image>
-		</view>
-	</view>
+<view class="main">
+    <image class='avatar' src='{{ user.avatarUrl }}'></image>
+    <view 
+        class="content"
+        style="{{ wish.status == 2 ? 'color: #c6d2fe; font-style:italic' : ''}}"
+    >
+        {{ wish.status == 2 ? '</该愿望已被沉入海底>' : wish.content }}
+    </view>
 
-	<view class="main">
-		<view class="content">
-			希望我的家人朋友快快乐乐幸福健康！
-		</view>
+    <view class="status" hidden='{{ wish.status == 2 }}'>
+        <view class="power">
+            <image src="https://7769-wish-e872ae-1252926300.tcb.qcloud.la/img/logo-power.png?sign=ff972c8a04f2d7da10c4d1346fedc95a&t=1549549016"></image>
+            <text>动力：{{ wish.power }}</text>
+        </view>
+        <view class="location">
+            <image src="https://7769-wish-e872ae-1252926300.tcb.qcloud.la/img/logo-location.png?sign=348954a595e33d150f6055033ff06cc9&t=1549549030"></image>
+            <text>位置：{{ wish.location }}</text>
+        </view>
+    </view>	
 
-		<view class="status">
-			<view class="power">
-				<image src="img/logo-power.png"></image>
-				<view>动力：66999</view>
-			</view>
-			<view class="location">
-				<image src="img/logo-location.png"></image>
-				<view>位置：九重天</view>
-			</view>
-		</view>	
+    <view class="btn-group {{ wish.status == 2 ? 'btn-group-down' : '' }}">
+        <button 
+            hidden="{{ isHelped || wish.status }}"
+            bindtap='OnWish'
+            type='warn'
+        >祝福TA美梦成真</button>
+        <button 
+            hidden="{{ !isHelped || wish.status }}"
+            open-type='share'
+            class='btn-share'
+        >邀请好友帮助TA</button>
+        <button
+            bindtap='OnToMake'
+            type='primary'
+        >我也要去许个愿</button>
+    </view>
 
-		<view class="btn-group">
-			<button id="wish" onclick="wish()"></button>
-			<button id="disdain" onclick="disdain()"></button>
-			<button id="me" onclick="me()"></button>
-			<button id="share" onclick="share()"></button>
-		</view>
+    <view class="log" hidden='{{ wish.status == 2 }}'>
 
-		<view class="log">
-			<view class="log-item">
-				<view class="helper">yowfung</view>
-				祝TA一臂之力，增加
-				<view class="power-add">43</view>
-				点动力。
-			</view>
-			<view class="log-item">
-				<view class="helper">喜阳阳</view>
-				带给TA热情鼓励，增加
-				<view class="power-add">3</view>
-				点动力。
-			</view>
-			<view class="log-item">
-				<view class="helper">某天</view>
-				不屑一顾地瞄了一眼，减少
-				<view class="power-sub">12</view>
-				点动力。
-			</view>
-		</view>
+        <view class="log-item" wx:for="{{ logs }}" wx:key="logItem">
+            <!-- <image src='{{ item.avatar }}'></image> -->
+            <!-- <view class="nickname">{{ item.name }}</view> -->
+            <!-- {{ item.way }}，{{ item.val > 0 ? '增加' : '减少'}} -->
+            <!-- <view class="{{ item.val > 0 ? 'power-add' : 'power-sub'}}">{{ item.val }}</view> -->
+            <!-- 点动力。 -->
+            {{ item }}
+        </view>
 
-	</view>
+    </view>
 
+</view>
+
+
+<view class='login' hidden='{{ !showLoginBox }}'>
+    <view class='login-box'>
+        <view>您需要先登录才能使用该小程序哦！</view>
+        <button
+            class='login-btn'
+            open-type='getUserInfo'
+            bindgetuserinfo='OnLogin'
+            type='primary'
+            loading='{{ isLogining }}'
+        >微信登录</button>
+    </view>
 </view>

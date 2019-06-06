@@ -22,10 +22,36 @@ button {
 	width: 100%;
 	height: calc(100% - 336rpx);
 	min-height: 712rpx;
-	background-image: url('../../images/bg.png');
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: 70% 0;
+}
+
+.main .music {
+    width: 64rpx;
+    height: 72rpx;
+    position: absolute;
+    top: 32rpx;
+    right: 32rpx;
+    background-color: rgba(255,255,255,0.2);
+    border: 1px solid #c2c2c2;
+    border-radius: 50%;
+    outline: none;
+    display: block;
+    background-image: url("https://7769-wish-e872ae-1252926300.tcb.qcloud.la/img/music.png?sign=61dddd4353393b971850e66fc220be78&t=1549517282");
+    background-size: 100% 100%;
+}
+
+.main .music-active {
+    width: 64rpx;
+    height: 72rpx;
+    position: absolute;
+    top: 32rpx;
+    right: 32rpx;
+    background-color: rgba(255,255,255,0.15);
+    border: 1px solid #a2a2a2;
+    border-radius: 50%;
+    outline: none;
+    display: block;
+    background-image: url("https://7769-wish-e872ae-1252926300.tcb.qcloud.la/img/music-1.png?sign=fb4f92cd94e56fea82a1be2dbcd82db7&t=1549517975");
+    background-size: 100% 100%;
 }
 
 .btn-group {
@@ -33,38 +59,47 @@ button {
 	margin-top: calc(50% - 244rpx);
 	width: 536rpx;
 	height: 492rpx;
-	box-shadow: 1rpx 1rpx 1rpx 1rpx;
-	border-radius: 10rpx;
+	box-shadow: 2rpx 2rpx 12rpx 6rpx #888;
+	border-radius: 22rpx;
 }
 
 .btn-group button {
 	width: 536rpx;
 	height: 164rpx;
 	display: block;
+    border-radius: 0rpx;
+    background-size: 100% 100%;
+    background-color: transparent;
 }
 
-.btn-group #btn-make  {
-	background-image: url(../../images/btn-make-default.png);
+.btn-group .btn_make {
+    background-image: url('https://7769-wish-e872ae-1252926300.tcb.qcloud.la/img/btn-make-default.png?sign=6ba28d454ab03b8848666848d6fceb23&t=1549467823');
+    background-size: 100% 100%;
 }
 
-.btn-group #btn-make:active {
-	background-image: url(../../images/btn-make-pressed.png);
+.btn-group .btn_make_hover {
+    background-image: url('https://7769-wish-e872ae-1252926300.tcb.qcloud.la/img/btn-make-pressed.png?sign=5727a5a2ed214d7a09cbdc78c7571cf7&t=1549467864');
+    background-size: 100% 100%;
 }
 
-.btn-group #btn-list  {
-	background-image: url(../../images/btn-list-default.png);
+.btn-group .btn_list {
+    background-image: url('https://7769-wish-e872ae-1252926300.tcb.qcloud.la/img/btn-list-default.png?sign=8ccc64cdcc2608164c738e52e6eed8e4&t=1549467930');
+    background-size: 100% 100%;
 }
 
-.btn-group #btn-list:active {
-	background-image: url(../../images/btn-list-pressed.png);
+.btn-group .btn_list_hover {
+    background-image: url('https://7769-wish-e872ae-1252926300.tcb.qcloud.la/img/btn-list-pressed.png?sign=0e7887818d2f6c9ff2fed7981823caef&t=1549467941');
+    background-size: 100% 100%;
 }
 
-.btn-group #btn-look  {
-	background-image: url(../../images/btn-look-default.png);
+.btn-group .btn_look {
+    background-image: url('https://7769-wish-e872ae-1252926300.tcb.qcloud.la/img/btn-look-default.png?sign=5b2066ad9ef29a77ddf62346727f4e23&t=1549467954');
+    background-size: 100% 100%;
 }
 
-.btn-group #btn-look:active {
-	background-image: url(../../images/btn-look-pressed.png);
+.btn-group .btn_look_hover {
+    background-image: url('https://7769-wish-e872ae-1252926300.tcb.qcloud.la/img/btn-look-pressed.png?sign=5559081998ea0863755dc5a121d29c87&t=1549467971');
+    background-size: 100% 100%;
 }
 
 .footer {
@@ -74,4 +109,32 @@ button {
 	font-size: 24rpx;
 	text-align: center;
 	color: #cccccc;
+}
+
+.login {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 999;
+}
+
+.login .login-box {
+    position: absolute;
+    bottom: 0rpx;
+    height: 280rpx;
+    width: 100%;
+    background-color: #fffcee;
+    box-shadow: -5rpx 0rpx 10rpx 3rpx;
+}
+
+.login .login-box view {
+    margin-top: 50rpx;
+    font-size: 34rpx;
+    text-align: center;
+}
+
+.login .login-box button {
+    margin-top: 40rpx;
+    width: 250rpx;
 }

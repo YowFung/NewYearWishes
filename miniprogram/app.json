@@ -1,11 +1,12 @@
 {
     "pages": [
         "pages/index/index",
+        "pages/look/look",
         "pages/help/help",
         "pages/list/list",
-        "pages/look/look",
         "pages/make/make",
-        "pages/wish/wish"
+        "pages/wish/wish",
+        "pages/error/error"
     ],
     "window": {
         "backgroundColor": "#ffecbe",
@@ -13,5 +14,6 @@
         "navigationBarBackgroundColor": "#f6f6f6",
         "navigationBarTitleText": "放飞你的新年愿望",
         "navigationBarTextStyle": "black"
-    }
+    },
+    "requiredBackgroundModes": ["audio"]
 }

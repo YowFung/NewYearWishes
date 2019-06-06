@@ -1,2 +1,101 @@
-<!--pages/list/list.wxml-->
-<text>pages/list/list.wxml</text>
+<view class='container' bindtap='OnNoSelect'>
+
+    <view class="header">
+		<image src="https://7769-wish-e872ae-1252926300.tcb.qcloud.la/img/header-list.png?sign=c0eeb48653e0f165ef5ed9339510f4f8&t=1549468735"></image>
+		<button class="btn-back" hover-class='btn-back-hover' bindtap="OnBack" plain='true'></button>
+        <picker bindchange='OnChangeFiltrate' value='{{ filtrateInx}}' range='{{ filtrateArr }}'>
+            {{ filtrateArr[filtrateInx] }}
+            <image src='https://7769-wish-e872ae-1252926300.tcb.qcloud.la/img/logo-filtrate-default.png?sign=445589bed933b89b9074fe64385a7e6c&t=1549538944'></image>
+        </picker>
+	</view>
+
+	<view class="main">
+		<view class="info">
+			<view class="power">
+				<image src="https://7769-wish-e872ae-1252926300.tcb.qcloud.la/img/logo-power.png?sign=69a1ff69f03f9ee3523a770975c9a431&t=1549468760"></image>
+				<view>总动力：{{ total.power }}</view>
+			</view>
+			<view class="ranking">
+				<image src="https://7769-wish-e872ae-1252926300.tcb.qcloud.la/img/logo-location.png?sign=955155d7fbb2b0fc9578bcba0201db30&t=1549703425"></image>
+				<view>最高位置：{{ total.location }}</view>
+			</view>
+		</view>
+
+		<view class="hr"></view>
+
+        <view class='tipText' hidden='{{ !tipText }}'>{{ tipText }}</view>
+        <button 
+            class='btn-to-make' 
+            type='primary' 
+            hidden='{{ !tipText || filtrateInx > 1 }}'
+            bindtap='OnToMake'
+        >去放飞愿望</button>
+
+        <view class="items">
+
+            <block wx:for="{{ items }}" wx:key="items">
+                <view 
+                    class="{{ itemClass[item.status] }} {{ current_item == item._id ? 'item-show' : ''}}"
+                    catchtap="OnSelect"
+                    data-id="{{ item._id }}"
+                    wx:if="{{ filtrateInx == 0 || filtrateInx == item.status+1 }}"
+                >
+                    <view class='new-log' hidden='{{ !item.logEvent }}'></view>
+                    <view class='new-givedLog' hidden='{{ item.logEvent != 2 }}'></view>
+                    <image class="icon" src="{{ iconUrls[item.status] }}"></image>
+                    <view class="content">{{ item.content }}</view>
+                    <view class="item-power" hidden='{{ item.status }}'>
+                        <image src="https://7769-wish-e872ae-1252926300.tcb.qcloud.la/img/logo-item-power.png?sign=cce291d090a3cf71116c1b97667dd8f6&t=1549468800"></image>
+                        <view>{{ item.power }}</view>
+                    </view>
+
+                    <view 
+                        class="controller" 
+                        hidden="{{ current_item != item._id }}" 
+                    >
+                        <button 
+                            plain='true' 
+                            size='mini'
+                            catchtap='OnShow'
+                        >查看</button>
+                        <button 
+                            hidden='{{ item.status }}'
+                            plain='true' 
+                            size='mini' 
+                            catchtap='OnCometrue'
+                        >美梦成真</button>
+                        <button 
+                            hidden='{{ item.status }}'
+                            plain='true' 
+                            size='mini'
+                            catchtap='OnQuit'
+                        >沉入海底</button>
+                        <button 
+                            hidden='{{ !item.status }}'
+                            plain='true' 
+                            size='mini'
+                            catchtap='OnDel'
+                        >彻底删除</button>
+                    </view>
+
+                </view>
+            </block>
+
+        </view>
+
+	</view>
+
+</view>
+
+<view class='login' hidden='{{ !showLoginBox }}'>
+    <view class='login-box'>
+        <view>您需要先登录才能使用该小程序哦！</view>
+        <button
+            class='login-btn'
+            open-type='getUserInfo'
+            bindgetuserinfo='OnLogin'
+            type='primary'
+            loading='{{ isLogining }}'
+        >微信登录</button>
+    </view>
+</view>

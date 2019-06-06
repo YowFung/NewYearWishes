@@ -1,2 +1,3 @@
-<!--pages/look/look.wxml-->
-<text>pages/look/look.wxml</text>
+<view>这里没什么好看的！</view>
+<image src="https://7769-wish-e872ae-1252926300.tcb.qcloud.la/img/timg.jpg?sign=bda4e9269ae6396d874b3feb96d58cc7&t=1549469171"></image>
+<button bindtap='OnBack'>返回首页</button>

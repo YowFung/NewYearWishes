@@ -1,0 +1,199 @@
+@font-face {
+    font-family: 'FZJianZhi-M23S';
+    src: 
+        url('https://7769-wish-e872ae-1252926300.tcb.qcloud.la/fonts/jianzhi.ttf') format('woff'),
+        url('https://7769-wish-e872ae-1252926300.tcb.qcloud.la/fonts/jianzhi.ttf?sign=edcef4d3dd0c8dfa18ee5faf53388f74&t=1549712766') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.header {
+	position: absolute;
+	width: 100%;
+	height: 343rpx;
+}
+
+.header image {
+	width: 100%;
+	height: 100%;
+}
+
+.header .title {
+	position: absolute;
+	top: 248rpx;
+	left: 30rpx;
+	height: 60rpx;
+}
+
+.header .title .own {
+	font-size: 38rpx;
+	color: #d5e1ff;
+	display: inline-block;
+	box-sizing: border-box;
+    vertical-align: middle;
+    max-width: 338rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    overflow: hidden;
+}
+
+.header .title .word {
+	width: 148rpx;
+	height: 45rpx;
+    vertical-align: middle;
+    margin-left: 10rpx;
+}
+
+.main {
+	position: absolute;
+	top: 343rpx;
+	width: calc(100% - 75rpx);
+	height: calc(100% - 403rpx);
+	padding: 30rpx 38rpx 8rpx 38rpx;
+}
+
+.main .avatar {
+    width: 120rpx;
+    height: 120rpx;
+    display: block;
+    border-radius: 50%;
+    border: 6rpx solid #fcf6e9;
+}
+
+.main .content {
+    width: calc(100% - 140rpx);
+    min-height: 130rpx;
+    line-height: 60rpx;
+	font-size: 48rpx;
+	font-family: "FZJianZhi-M23S";
+	color: #18285e;
+    float: right;
+    word-break: break-all;
+    margin-top: -130rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .status {
+	margin: 60rpx 0;
+	padding: 15rpx;
+	border-top: 2rpx solid #dcdcdc;
+	border-bottom: 2rpx solid #dcdcdc;
+	font-family: "FZJianZhi-M23S";
+	font-size: 26rpx;
+}
+
+.main .status image {
+	display: inline-block;
+    width: 30rpx;
+    height: 30rpx;
+    vertical-align: middle;
+}
+
+.main .status text {
+	margin-left: 15rpx;
+    vertical-align: middle;
+}
+
+.main .status .power {
+	display: inline-block;
+	color: #588cda;
+}
+
+.main .status .location {
+	float: right;
+	color: #8e1e1e;
+}
+
+.main .btn-group button {
+    margin-top: 20rpx;
+	width: 450rpx;
+}
+
+.main .btn-group .btn-share {
+    background-color: #f26f22;
+    color: white;
+}
+
+.main .btn-group-down {
+    position: absolute;
+    bottom: 0rpx;
+    width: calc(100% - 76rpx);
+    height: 500rpx;
+    background-image: url('https://7769-wish-e872ae-1252926300.tcb.qcloud.la/img/bg-sea.png?sign=67bfb9177e5bf2948c5a1cf5005c65b0&t=1549551270');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: 0rpx 60rpx;
+}
+
+.main .log {
+	font-size: 26rpx;
+	width: 100%;
+	padding: 15rpx 0;
+    margin-top: 60rpx;
+	margin-bottom: 30rpx;
+	color: #777;
+    border-top: 2rpx solid #dcdcdc;
+    padding-top: 20rpx;
+}
+
+.main .log .log-item {
+    width: 100%;
+	height: 38rpx;
+	overflow: hidden;
+    text-align: center;
+    margin-bottom: 10rpx;
+}
+
+.main .log .log-item image {
+    width: 32rpx;
+    height: 32rpx;
+    vertical-align: middle;
+    margin-right: 10rpx;
+    border-radius: 4rpx;
+}
+
+.main .log .log-item .nickname {
+	color: #3f9a18;
+	padding-right: 11rpx;
+    display: inline-block;
+}
+
+.main .log .log-item .power-add {
+	color: #2c6dbd;
+    display: inline-block;
+}
+
+.main .log .log-item .power-sub {
+	color: #bd2c2c;
+    display: inline-block;
+}
+
+.login {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 999;
+}
+
+.login .login-box {
+    position: absolute;
+    bottom: 0rpx;
+    height: 280rpx;
+    width: 100%;
+    background-color: #fffcee;
+    box-shadow: -5rpx 0rpx 10rpx 3rpx;
+}
+
+.login .login-box view {
+    margin-top: 50rpx;
+    font-size: 34rpx;
+    text-align: center;
+}
+
+.login .login-box button {
+    margin-top: 40rpx;
+    width: 250rpx;
+}

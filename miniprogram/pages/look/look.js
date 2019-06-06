@@ -1,66 +1,25 @@
 // pages/look/look.js
+
+const app = getApp();
+
 Page({
-
     /**
-     * 页面的初始数据
+     * 返回首页
      */
-    data: {
-
+    OnBack(event) {
+        wx.navigateBack({
+            delta: 1
+        })
     },
 
     /**
-     * 生命周期函数--监听页面加载
+     *  点击右上角菜单的“分享”选项
      */
-    onLoad: function (options) {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面初次渲染完成
-     */
-    onReady: function () {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面显示
-     */
-    onShow: function () {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面隐藏
-     */
-    onHide: function () {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面卸载
-     */
-    onUnload: function () {
-
-    },
-
-    /**
-     * 页面相关事件处理函数--监听用户下拉动作
-     */
-    onPullDownRefresh: function () {
-
-    },
-
-    /**
-     * 页面上拉触底事件的处理函数
-     */
-    onReachBottom: function () {
-
-    },
-
-    /**
-     * 用户点击右上角分享
-     */
-    onShareAppMessage: function () {
-
+    onShareAppMessage(res) {
+        return {
+            title: "新年刚过，一起来许个愿吧！",
+            path: "/pages/index/index",
+            imageUrl: "https://7769-wish-e872ae-1252926300.tcb.qcloud.la/img/bg.png?sign=062b4a475f944c754f1b4179170afab5&t=1549552453"
+        }
     }
 })

@@ -1,1 +1,105 @@
-/* pages/make/make.wxss */
+.header {
+	position: absolute;
+	width: 100%;
+	height: 521rpx;
+}
+
+.header image {
+	width: 100%;
+	height: 100%;
+}
+
+.header .btn-back {
+	position: absolute;
+	top: 38rpx;
+	left: 38rpx;
+	width: 70rpx;
+	height: 72rpx;
+    outline: none;
+	border: none;
+    border-radius: 0px;
+    background-image: url('https://7769-wish-e872ae-1252926300.tcb.qcloud.la/img/btn-back-default.png?sign=e2f7eda5f76122a2acdb67dd3c99b011&t=1549468381');
+    background-size: 100% 100%;
+    background-color: transparent;
+    display: block;
+}
+
+.header .btn-back-hover {
+    background-image: url('https://7769-wish-e872ae-1252926300.tcb.qcloud.la/img/btn-back-pressed.png?sign=2c2ff94ea76ee49f2c2aaed54e52d354&t=1549468390');
+    background-size: 100% 100%;
+}
+
+.main {
+	position: absolute;
+	top: 521rpx;
+	width: 100%;
+	height: calc(100% - 521rpx);
+}
+
+.main .tip {
+	margin: 40rpx 0rpx 0rpx 44rpx;
+    font-size: 32rpx;
+    display: block;
+}
+
+.main textarea {
+	width: calc(100% - 120rpx);
+	margin: 45rpx 0rpx 0rpx 45rpx;
+	height: 107rpx;
+	border-radius: 15rpx;
+	border: 5rpx solid #0068b7;
+	outline: none;
+	padding: 15rpx;
+	font-size: 28rpx;
+	resize: none;
+	background-color: #fff3d6;
+	color: #7c85b2;
+}
+
+.main .btn-send {
+    margin-top: 40rpx;
+    width: calc(100% - 85rpx);
+}
+
+.main .send {
+	position: absolute;
+	right: 68rpx;
+	bottom: 68rpx;
+	width: 135rpx;
+	height: 195rpx;
+	outline: none;
+	border: none;
+    border-radius: 0px;
+    background-size: 100% 100%;
+    background-color: transparent;
+    display: block;
+    box-shadow: none;
+}
+
+.login {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 999;
+}
+
+.login .login-box {
+    position: absolute;
+    bottom: 0rpx;
+    height: 280rpx;
+    width: 100%;
+    background-color: #fffcee;
+    box-shadow: -5rpx 0rpx 10rpx 3rpx;
+}
+
+.login .login-box view {
+    margin-top: 50rpx;
+    font-size: 34rpx;
+    text-align: center;
+}
+
+.login .login-box button {
+    margin-top: 40rpx;
+    width: 250rpx;
+}

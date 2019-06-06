@@ -1,2 +1,103 @@
-<!--pages/wish/wish.wxml-->
-<text>pages/wish/wish.wxml</text>
+<view class="header">
+    <image src="https://7769-wish-e872ae-1252926300.tcb.qcloud.la/img/header-wish.png?sign=9c572932aebfe2387930c06d77e122f4&t=1549543015"></image>
+    <button class="btn-back" hover-class='btn-back-hover' bindtap="OnBack" plain='true'></button>
+</view>
+
+<view class="main">
+    <image class='avatar' src='{{ avatarUrl }}'></image>
+    <view class="content">
+        {{ wish.content }}
+    </view>
+
+    <view class="btn-group">
+        <button 
+            plain='true' 
+            size='mini'
+            catchtap='OnQuit'
+            hidden='{{ wish.status != 0 }}'
+        >沉入海底</button>
+        <button 
+            plain='true' 
+            size='mini' 
+            catchtap='OnCometrue'
+            hidden='{{ wish.status != 0 }}'
+        >美梦成真</button>
+        <button 
+            plain='true' 
+            size='mini' 
+            catchtap='OnHelp'
+            open-type='share'
+            hidden='{{ wish.status != 0 }}'
+        >请求助力</button>
+        <button 
+            plain='true' 
+            size='mini' 
+            catchtap='OnDel'
+            hidden='{{ wish.status == 0 }}'
+        >彻底删除</button>
+    </view>
+
+    <image class='icon' src='{{ iconUrl[wish.status] }}'></image>
+
+    <view class="story">
+        <b>{{ wish.createdAt }}</b>，你怀着复杂的心情放飞了这个愿望，悠风给它送来了<b>{{ wish.startPower }}</b>点初始动力，在这晴朗的蓝天下，它将飞过每一座高塔、每一座大山，飞向世界的最巅峰……
+    </view>
+
+    <view class="status">
+        <view class="power">
+            <image src="https://7769-wish-e872ae-1252926300.tcb.qcloud.la/img/logo-power.png?sign=c3ead5e680ec6704748674d39555ac05&t=1549543171"></image>
+            <view>动力：{{ wish.power }}</view>
+        </view>
+        <view class="location">
+            <image src="https://7769-wish-e872ae-1252926300.tcb.qcloud.la/img/logo-location.png?sign=92fbf99d063aeaaece26bade5a6e95bb&t=1549543188"></image>
+            <view>位置：{{ wish.location }}</view>
+        </view>
+    </view>	
+
+    <view class="log">
+
+        <view class="log-item" wx:for="{{ logs }}" wx:key="*this">
+            <!-- <image src='{{ item.avatar }}'></image> -->
+            <!-- <view class="nickname">{{ item.name }}</view> -->
+            <!-- {{ item.way }}，{{ item.val > 0 ? '增加' : '减少'}} -->
+            <!-- <view class="{{ item.val > 0 ? 'power-add' : 'power-sub'}}">{{ item.val }}</view> -->
+            <!-- 点动力。 -->
+            {{ item }}
+        </view>
+
+    </view>
+</view>
+
+<view class="alert" hidden='{{ !alert.show }}'>
+    <view class='alert-bg' bindtap='OnHide'></view>
+    <view class="alert-box">
+        <view class="title">{{ alert.title }}</view>
+        <view class="tips">{{ alert.content }}</view>
+        <button 
+            class="cancel" 
+            plain='true'
+            style='background-image: url({{ imgUrl.btn_cancel }})'
+            bindtap='OnHide'
+        ></button>
+        <button 
+            class="ok" 
+            plain='true'
+            style='background-image: url({{ imgUrl.btn_ok }})'
+            bindtap='OnOk'
+        ></button>
+    </view>
+    
+</view>
+
+<view class='login' hidden='{{ !showLoginBox }}'>
+    <view class='login-box'>
+        <view>您需要先登录才能使用该小程序哦！</view>
+        <button
+            class='login-btn'
+            open-type='getUserInfo'
+            bindgetuserinfo='OnLogin'
+            type='primary'
+            loading='{{ isLogining }}'
+        >微信登录</button>
+    </view>
+</view>

@@ -1,2 +1,31 @@
-<!--pages/make/make.wxml-->
-<text>pages/make/make.wxml</text>
+<view class="header">
+    <image src="https://7769-wish-e872ae-1252926300.tcb.qcloud.la/img/header-make.png?sign=c2aaa0dda29902935d5c6cdc526b204e&t=1549468186" bindtap='OnTest'></image>
+    <button class="btn-back" hover-class='btn-back-hover' bindtap="OnBack" plain='true'></button>
+</view>
+
+<view class="main">
+    <text class='tip'>请用最精炼的文字来描述你的新年愿望：</text>
+    <textarea 
+        placeholder="最多不超过25个字哦..." 
+        maxlength="25"
+        bindinput='OnInput'
+    ></textarea>
+    <button
+        type='primary'
+        class='btn-send'
+        bindtap='OnSend'
+    >放 飞 愿 望</button>
+</view>
+
+<view class='login' hidden='{{ !showLoginBox }}'>
+    <view class='login-box'>
+        <view>您需要先登录才能使用该小程序哦！</view>
+        <button
+            class='login-btn'
+            open-type='getUserInfo'
+            bindgetuserinfo='OnLogin'
+            type='primary'
+            loading='{{ isLogining }}'
+        >微信登录</button>
+    </view>
+</view>
